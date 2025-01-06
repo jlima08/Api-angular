@@ -1,0 +1,26 @@
+http://localhost:3000/cursos
+
+###
+
+POST http://localhost:3000/cursos HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "javaa"
+    
+    
+} 
+
+###
+PUT http://localhost:3000/cursos/89a4 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "javaaa",
+    "id": "3"
+    
+}
+
+###
+
+DELETE http://localhost:3000/cursos/cefd

@@ -1,0 +1,34 @@
+<div class="center">
+    <h1>Campeonato Brasileiro</h1>
+
+    <table>
+        <thead class="gray">
+            <th>Posição</th>
+            <th>Escudo</th>
+            <th>Time</th>
+            <th>Pontos</th>
+            <th>J</th>
+            <th>V</th>
+            <th>E</th>
+            <th>D</th>
+            <th>%</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let time of tabela | async; else loading">
+                <td>{{time.posicao}}</td>
+                <td><img src="{{time.time.escudo}}" alt=""></td>
+                <td>{{time.time.nome_popular}}</td>
+                <td>{{time.pontos}}</td>
+                <td>{{time.jogos}}</td>
+                <td>{{time.vitorias}}</td>
+                <td>{{time.empates}}</td>
+                <td>{{time.derrotas}}</td>
+                <td class="blue">{{time.aproveitamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #loading>
+        <span>Carregando...</span>
+      </ng-template>
+</div>
