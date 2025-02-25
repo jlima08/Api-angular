@@ -1,1 +1,81 @@
-<p>loiane works!</p>
+<div class="divvv ngif_e_ngfor">
+  <h3>Ng If e NgFor:</h3>
+  <p>NgIf muda o card para lista clicando no botao e o NgFor adiciona os items e novos cards dinamicamente </p>
+  <div>
+      <!-- Alterna entre 'cards' e 'listagem' -->
+      <button (click)="toggleLayout()">Mudar para Listagem/Card</button>
+    </div>
+  
+    <!-- Exibição de cards -->
+    <div *ngIf="isCardLayout">
+      <div class="card" *ngFor="let item of items">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  
+    <!-- Exibição em formato de lista -->
+    <div *ngIf="!isCardLayout">
+      <ul>
+        <li *ngFor="let item of items">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </li>
+      </ul>
+    </div>
+</div>
+
+  <div class="divvv ngsw">
+    <h3>NG SWITCH : </h3>
+    <div class="links">
+      <a [class.active]="aba == 'nome' " (click)="aba = 'nome' ">Nome</a>
+      <a [class.active]="aba == 'sobrenome' " (click)="aba = 'sobrenome' ">Sobrenome</a>
+      <a [class.active]="aba == 'teste33' " (click)="aba = 'sobrenome2' ">Sobrenome2</a>
+      <a [class.active]="aba == 'teste33' " (click)="aba = 'todos' ">Todos</a>
+    </div>
+
+    <div class="result"  [ngSwitch]="aba">
+      <div *ngSwitchCase="'sobrenome'">LIMA</div>
+      <div *ngSwitchCase="'sobrenome2'">ARAUJO</div>
+      <div *ngSwitchCase="'nome'">JONATAS</div>
+      <div *ngSwitchCase="'todos'">JONATAS LIMA ARAUJO</div>
+      <div *ngSwitchDefault>Cique nos nomes a cima:</div>
+    
+      
+    </div>
+  </div>
+
+  <div class="divvv cats">
+    <h3>NgFor:</h3>
+    <div >
+      <ul *ngFor="let item of bixos, let i = index">
+        <li >
+          {{i ++ 1}} - {{item.nome}}, {{item.idade}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divvv">
+    <h3>NG - CONTENT</h3>
+
+    <app-ng-content-exemplo>
+      <div class="titulo">
+        TIITULO ng 
+      </div>
+      <div class="corpo">
+        CORPO ng
+      </div>
+    </app-ng-content-exemplo>
+
+  </div>
+
+  <div class="divvv">
+    <h3>Renderer</h3>
+    <app-diretivas-custons></app-diretivas-custons>
+  </div>
+
+  
+  
+
+ 

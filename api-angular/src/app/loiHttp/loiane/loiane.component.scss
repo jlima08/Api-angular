@@ -1,0 +1,42 @@
+.divvv{
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+.ngif_e_ngfor{
+  display: flex;
+  flex-direction: column;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .ngsw{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // border: 1px solid black;
+    // padding: 20px;
+    // margin-top: 20px;
+  }
+  .ngsw .links{
+    display: flex;
+    gap: 10px;
+  }
+
+  .ngsw .teste{
+    text-decoration: underline;
+  }

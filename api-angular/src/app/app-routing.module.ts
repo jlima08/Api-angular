@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { DetalhesComponent } from './testes/detalhes/detalhes.component';
 import { LoianeComponent } from './loiHttp/loiane/loiane.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 const routes: Routes = [
   
@@ -26,6 +27,11 @@ const routes: Routes = [
       },
       {
         path: 'cursos',
+        loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)
+      },
+      {
+        path: 'datab',
+        component: DataBindingComponent,
         loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)
       },
 
