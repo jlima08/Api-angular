@@ -7,7 +7,7 @@ import { CampeonatoService } from 'src/app/services/campeonato.service';
   styleUrls: ['./detalhes.component.scss']
 })
 export class DetalhesComponent implements OnInit {
-  tabela!:any;
+  tabela:any;
   ngOnInit(): void {
     this.tabela = this.campeonatoService.getTabelaSerieA();
   }

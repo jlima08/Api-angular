@@ -1,0 +1,25 @@
+<form action="" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div [ngClass]="cssErro('nome')">
+        <label for="">Nome</label>
+        <input type="text" placeholder="nome" formControlName="nome">
+        <small *ngIf="formulario.get('nome')?.errors?.['required']" style="color: red">
+            Campo obrigatório!
+          </small>
+    </div>
+    <div>
+        <label for="">Email</label>
+        <input type="text" placeholder="email" formControlName="email">
+        
+    </div>
+    <div>
+        <label for="">Idade</label>
+        <input maxlength="2" type="text" placeholder="idade" formControlName="idade">
+        <small *ngIf="formulario.get('idade')?.errors?.['pattern']" style="color: red">
+            Apenas números são permitidos!
+          </small>
+        
+    </div>
+    <button [disabled]="formulario.invalid">Submit</button>
+
+    <button (click)="resetar()">Reset</button>
+</form>

@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
 export class DataBindingComponent {
 
   nome: string = "abc"
+  pessoa = {
+    nome: "",
+    idade: 0
+  }
+
+  onMudouValor(evento: any){
+    console.log(evento.novovalor)
+
+  }
 
 }

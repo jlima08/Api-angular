@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CampeonatoService } from './services/campeonato.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',

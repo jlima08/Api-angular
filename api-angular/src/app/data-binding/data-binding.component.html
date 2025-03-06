@@ -1,5 +1,6 @@
 <div>
     <h3>two way</h3>
+    <p>ultiliza o ngModel que pertence ao formsModule</p>
 
     <div>
         <input type="text"
@@ -7,4 +8,14 @@
         [(ngModel)]="nome"/>
     </div>
     <p>voce digitou {{ nome }}</p>
+
+    <div>
+        <input type="text" [(ngModel)]="pessoa.nome ">
+        <input type="text" [(ngModel)]="pessoa.idade " maxlength="2">
+        <br>
+        <p>meu nome <strong>{{ pessoa.nome }}</strong> e tenho <strong>{{ pessoa.idade }}</strong> aaaanos</p>
+    </div>
 </div>
+<hr>
+
+<app-output-properties [valor]="8" (mudouvalor)="onMudouValor($event)" ></app-output-properties>

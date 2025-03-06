@@ -13,7 +13,10 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivasCustonsComponent } from './diretivas-custons/diretivas-custons.component';
 import { HighLightMouseDirective } from './shared/high-light-mouse.directive';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OutputPropertiesComponent } from './data-binding/output-properties/output-properties.component';
+
+import { FormReativoModule } from './form-reativo/form-reativo/form-reativo.module';
 
 @NgModule({
   declarations: [
@@ -26,13 +29,17 @@ import { FormsModule } from '@angular/forms';
     FundoAmareloDirective,
     DiretivasCustonsComponent,
     HighLightMouseDirective,
-    DataBindingComponent
+    DataBindingComponent,
+    OutputPropertiesComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
