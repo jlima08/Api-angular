@@ -10,14 +10,14 @@ import { environment } from 'src/environments/environment';
 export class CursosService {
 
   //variavel sem poder atualizar o valor
-  private readonly API = `${environment.API}cursos`;
+  private readonly API = 'http://localhost:3000/cursos';
 
   constructor(private http: HttpClient) { }
 
   list(){ //metodo
     return this.http.get<Curso[]>(this.API)
     .pipe(
-      delay(2000),
+      delay(3000),
       tap(console.log)
     );
   }

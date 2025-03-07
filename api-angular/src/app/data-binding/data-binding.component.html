@@ -10,7 +10,7 @@
     <p>voce digitou {{ nome }}</p>
 
     <div>
-        <input type="text" [(ngModel)]="pessoa.nome ">
+        <input type="text" [(ngModel)]="pessoa.nome " maxlength="20">
         <input type="text" [(ngModel)]="pessoa.idade " maxlength="2">
         <br>
         <p>meu nome <strong>{{ pessoa.nome }}</strong> e tenho <strong>{{ pessoa.idade }}</strong> aaaanos</p>

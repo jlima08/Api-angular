@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponent {
 
-  nome: string = "abc"
+  nome: string = "JON"
   pessoa = {
     nome: "",
     idade: 0
