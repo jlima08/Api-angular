@@ -1,0 +1,45 @@
+<div class="main">
+  <form action="">
+    <input type="text" disabled placeholder="ID" [(ngModel)]="id" name="id">
+    <input type="text" placeholder="Autor" [(ngModel)]="autor" name="autor" >
+    <input type="text" placeholder="Musica" [(ngModel)]="musica" name="musica">
+    <button (click)="addMusica()" >
+      {{ id ? 'Editar' : 'Adicionar'  }}
+    </button>
+  
+  </form>
+  
+  <table  *ngIf="musicas$ | async as musica; else loading">
+      <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Musica</th>
+  
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let mus of musica">
+            <th scope="row">{{ mus.id }}</th>
+            <td> {{ mus.autor }} </td>
+            <td> {{ mus.musica }}  </td>
+            <td (click)="preencher(mus)"> <i class="bi bi-pencil-square"></i> </td>
+            <td (click)="remover(mus.id!)"> <i class="bi bi-trash-fill"></i> </td>
+  
+          </tr>
+           <!-- <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td> </td>
+          </tr>  -->
+  
+        </tbody>
+    </table>
+    <ng-template #loading>
+      <div class="spinner-grow m-5 text-danger"  style="width: 8%; height: 5.5rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      
+    </ng-template>
+
+</div>

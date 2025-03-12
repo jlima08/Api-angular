@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OutputPropertiesComponent } from './data-binding/output-properties/output-properties.component';
 
 import { FormReativoModule } from './form-reativo/form-reativo/form-reativo.module';
+import { MusicsComponent } from './lista-musicas/musics/musics.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FormReativoModule } from './form-reativo/form-reativo/form-reativo.modu
     HighLightMouseDirective,
     DataBindingComponent,
     OutputPropertiesComponent,
+    MusicsComponent,
     
   ],
   imports: [

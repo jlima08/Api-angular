@@ -18,8 +18,8 @@ export class FundoAmareloDirective implements OnInit {
   //   // );
   // }
   ngOnInit(): void {
-    this.element.style.backgroundColor = 'yellow'
-    this.element.style.width = '20%'
+    this.element.style.backgroundColor = 'hotpink'
+    this.element.style.width = '30%'
     this.element.style.textAlign = 'center'
   }
 

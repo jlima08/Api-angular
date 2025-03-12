@@ -1,0 +1,24 @@
+{
+  "musicas": [
+    {
+      "id": 1,
+      "autor": "RHCP",
+      "musica": "Dani California"
+    },
+    {
+      "id": 2,
+      "autor": "Link Park",
+      "musica": "Faint"
+    },
+    {
+      "id": 3,
+      "autor": "Link Park",
+      "musica": "In the End"
+    },
+    {
+      "id": 4,
+      "autor": "RHCP",
+      "musica": "Can't Stop"
+    }
+  ]
+}

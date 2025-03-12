@@ -5,6 +5,7 @@ import { DetalhesComponent } from './testes/detalhes/detalhes.component';
 import { LoianeComponent } from './loiHttp/loiane/loiane.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormReativoComponent } from './form-reativo/form-reativo.component';
+import { MusicsComponent } from './lista-musicas/musics/musics.component';
 
 const routes: Routes = [
 
@@ -38,6 +39,11 @@ const routes: Routes = [
   {
     path: 'formR',
     component: FormReativoComponent,
+   
+  },
+  {
+    path: 'musicas',
+    component: MusicsComponent,
    
   },
 
