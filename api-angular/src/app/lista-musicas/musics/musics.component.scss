@@ -1,59 +1,210 @@
-
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    
-    height: 100vh;
+    height: 97vh;
     width: 100%;
     background-color: #1d1d1d;
-    
 
+    .beats{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        margin-top: 100px;
+        rotate: 180deg;
+        
+        width: 50%;
+        height: 30px;
+        .b1{
+            
+            width: 80%;
+            animation: deslize 2s infinite alternate-reverse;
+        }
+        .b2{
+            
+            width: 80%;
+            animation: deslize2 2s infinite alternate-reverse;
+        }
+        .b3{
+            
+            width: 80%;
+            animation: deslize3 2s infinite alternate-reverse;
+        }
+    }
 }
 
-
-form{
+form {
     display: flex;
     gap: 10px;
     padding: 10px;
-    input{
+
+    input {
         background: transparent;
         color: #dbdbdb;
         border: 1px solid #b1b1b1;
         padding: 5px;
         border-radius: 8px;
     }
-    
-    button{
+
+    button {
         border-radius: 10px;
         border: 2px solid #dbdbdb;
-        background-color: #020077;
+        background-color: #007759;
         color: #dbdbdb;
         font-weight: 700;
     }
-    button:hover{
-        border: 2px solid #0300b3;
-        color: #020077;
+
+    button:hover {
+        border: 2px solid #00b34b;
+        color: #007745;
         background-color: #dbdbdb;
     }
 }
-table{
+
+.tabela {
     width: 80%;
-    padding: 10px;
-   box-shadow: 1px 1px 10px 1px #616161;
+    padding: 10px 25px 25px 20px;
+    box-shadow: 1px 1px 20px 5px #00043b;
+    border-radius: 15px 40px ;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    animation: pulsar 2s infinite alternate;
+}
+
+.tabela:hover {
+    box-shadow: 1px 1px 30px 8px #3a3a3a;
+}
+
+table {
+    width: 100%;
     background-color: transparent;
     color: #dbdbdb;
-    thead{
+
+    .som{
+        animation: pulsar 2s infinite alternate;
+        padding: 1px;
+        border-radius: 5px;
+    }
+
+    thead {
         color: #dbdbdb;
     }
-    tr{
-        border-bottom: 1px solid #dbdbdb;
-        padding: 5px;
+
+    tr {
+        border-bottom: 1px solid #494949;
         gap: 2px;
     }
-    i:hover{
+
+    th{
+        padding: 3px;
+    }
+
+    .edit, .lixo {
+        padding: 2px;
+    }
+
+    .edit:hover {
         cursor: pointer;
-        background-color: #616161;
+        background-color: #000152;
+    }
+
+    .lixo:hover {
+        cursor: pointer;
+        background-color: #520000;
+    }
+
+    .impar {
+        background-color: #1d1d1d;
+    }
+
+    .par {
+        background-color: #303030;
     }
 }
+
+
+
+
+@keyframes pulsar {
+    0% {
+      box-shadow: 0px 0px 10px #004f63fa;
+    }
+    25% {
+      box-shadow: 0px 0px 20px #020063fa;
+    }
+    50% {
+      box-shadow: 0px 0px 10px #34006e;
+    }
+    100% {
+      box-shadow: 0px 0px 20px #4b005ef8;
+    }
+  }
+
+  @keyframes deslize {
+    0% {
+        background-color:  #004f63fa;
+        height: 20px;
+    
+      }
+      25% {
+        background-color:  #020063fa;
+        height: 50px;
+        
+      }
+      50% {
+        background-color:  #34006e;
+        height: 60px;
+      }
+      100% {
+        background-color:  #4b005ef8;
+        height: 45px;
+      }
+
+  }
+  
+  @keyframes deslize2 {
+    0% {
+        background-color:  #004f63fa;
+        height: 25px;
+    
+      }
+      25% {
+        background-color:  #020063fa;
+        height: 58px;
+        
+      }
+      50% {
+        background-color:  #34006e;
+        height: 68px;
+      }
+      100% {
+        background-color:  #4b005ef8;
+        height: 58px;
+      }
+
+  }
+  @keyframes deslize3 {
+    0% {
+        background-color:  #004f63fa;
+        height: 49px;
+    
+      }
+      25% {
+        background-color:  #020063fa;
+        height: 62px;
+        
+      }
+      50% {
+        background-color:  #34006e;
+        height: 78px;
+      }
+      100% {
+        background-color:  #4b005ef8;
+        height: 52px;
+      }
+
+  }

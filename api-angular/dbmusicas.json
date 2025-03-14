@@ -1,24 +1,39 @@
 {
   "musicas": [
     {
-      "id": 1,
+      "id": "1",
       "autor": "RHCP",
       "musica": "Dani California"
     },
     {
-      "id": 2,
+      "id": "2",
+      "autor": "RHCP",
+      "musica": "Can't Stop"
+    },
+    {
+      "id": "3",
       "autor": "Link Park",
       "musica": "Faint"
     },
     {
-      "id": 3,
+      "id": "4",
       "autor": "Link Park",
       "musica": "In the End"
     },
     {
-      "id": 4,
-      "autor": "RHCP",
-      "musica": "Can't Stop"
+      "id": "5",
+      "autor": "Capital Inicial",
+      "musica": "Que Pais é Esse"
+    },
+    {
+      "id": "6",
+      "autor": "Avenged",
+      "musica": "Batcountry "
+    },
+    {
+      "id": "7",
+      "autor": "Slipknot",
+      "musica": "Duality"
     }
   ]
 }

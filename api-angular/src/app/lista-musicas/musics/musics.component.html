@@ -1,45 +1,62 @@
 <div class="main">
   <form action="">
     <input type="text" disabled placeholder="ID" [(ngModel)]="id" name="id">
-    <input type="text" placeholder="Autor" [(ngModel)]="autor" name="autor" >
+    <input type="text" placeholder="Autor" [(ngModel)]="autor" name="autor">
     <input type="text" placeholder="Musica" [(ngModel)]="musica" name="musica">
-    <button (click)="addMusica()" >
-      {{ id ? 'Editar' : 'Adicionar'  }}
+    <button (click)="addMusica()">
+      {{ id ? 'Editar' : 'Adicionar' }}
     </button>
-  
   </form>
-  
-  <table  *ngIf="musicas$ | async as musica; else loading">
-      <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Autor</th>
-            <th scope="col">Musica</th>
-  
-          </tr>
-        </thead>
-        <tbody >
-          <tr *ngFor="let mus of musica">
-            <th scope="row">{{ mus.id }}</th>
-            <td> {{ mus.autor }} </td>
-            <td> {{ mus.musica }}  </td>
-            <td (click)="preencher(mus)"> <i class="bi bi-pencil-square"></i> </td>
-            <td (click)="remover(mus.id!)"> <i class="bi bi-trash-fill"></i> </td>
-  
-          </tr>
-           <!-- <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td> </td>
-          </tr>  -->
-  
-        </tbody>
-    </table>
-    <ng-template #loading>
-      <div class="spinner-grow m-5 text-danger"  style="width: 8%; height: 5.5rem;" role="status">
-        <span class="visually-hidden">Loading...</span>
-      </div>
-      
-    </ng-template>
 
+  <div class="tabela">
+    <table *ngIf="musicas$ | async as musica; else loading">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Autor <i class=" bi bi-person-fill"></i> </th>
+          <th scope="col">Musica <i class="som bi bi-music-note-beamed"></i> </th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let mus of musica; let i = index">
+        <tr [ngClass]="{'par': i % 2 === 0, 'impar': i % 2 !== 0}">
+          <th scope="row">{{ mus.id }}</th>
+          <td> {{ mus.autor }} </td>
+          <td> {{ mus.musica }} </td>
+          <!-- <td><i (click)="tocar()" *ngIf="!tocando" class="bi bi-play-circle"></i></td>
+          <td><i (click)="Pausar()" *ngIf="tocando" class="bi bi-pause-circle"></i></td> -->
+          <!-- <td>  <i (click)="tocarOuPausar()"> {{ tocando ? '⏸ Pausar' : '▶ Tocar' }} </i> </td> -->
+          <td (click)="preencher(mus)"> <i class="edit bi bi-pencil-square"></i> </td>
+          <td (click)="remover(mus.id!)"> <i class="lixo bi bi-trash-fill"></i> </td>
+        </tr>
+        <!-- <tr>
+              <th></th>
+              <td></td>
+              <td></td>
+            </tr>  -->
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #loading>
+    <div class="spinner-border m-5 text-success" style="width: 5rem; height: 5rem; color: hotpink !important; "
+      role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </ng-template>
+
+  <div  class="beats">
+    <div class="b2" ></div>
+    <div class="b1" ></div>
+    <div class="b3"></div>
+    <div class="b2"></div>
+    <div class="b1"></div>
+    <div class="b3"></div>
+    <div class="b2"></div>
+    <div class="b1"></div>
+    <div class="b2"></div>
+    <div class="b3"></div>
+    <div class="b1"></div>
+    <div class="b2"></div>
+    <div class="b3"></div>
+  </div>
 </div>
